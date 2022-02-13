@@ -1,30 +1,30 @@
 import java.util.*;
 
-class Solution {
+class PGS42579 {
 	public static int[] solution(String[] genres, int[] plays) {
 
 		int[] answer = {};
 
 		Map<String, Integer> map = new HashMap<>();
 
-		// Map¿¡ Àå¸£º°(key) È½¼ö(value) ´õÇÏ±â
+		// Mapì— ì¥ë¥´ë³„(key) íšŸìˆ˜(value) ë”í•˜ê¸°
 		for(int i = 0; i < genres.length; i++) {
 			map.put(genres[i], map.getOrDefault(genres[i], 0) + plays[i]);
 		}
 
-		// ³»¸²Â÷¼øÀ» À§ÇÑ list
+		// ë‚´ë¦¼ì°¨ìˆœì„ ìœ„í•œ list
 		ArrayList<String> genList = new ArrayList<>(map.keySet()); 
-		Collections.sort(genList, (o1, o2) -> map.get(o2) - map.get(o1)); // ³»¸²Â÷¼ø
+		Collections.sort(genList, (o1, o2) -> map.get(o2) - map.get(o1)); // ë‚´ë¦¼ì°¨ìˆœ
 
-		// ³ë·¡ÀÇ °íÀ¯¹øÈ£ ¸®½ºÆ®
+		// ë…¸ë˜ì˜ ê³ ìœ ë²ˆí˜¸ ë¦¬ìŠ¤íŠ¸
 		ArrayList<Integer> numList = new ArrayList<>();
 
 		for(String g : genList) {
-			int song1 = 0; // 1¹ø°î °íÀ¯¹øÈ£
-			int song2 = 0; // 2¹ø°î °íÀ¯¹øÈ£
-			int maxPlay = 0; // Àç»ıÈ½¼ö
+			int song1 = 0; // 1ë²ˆê³¡ ê³ ìœ ë²ˆí˜¸
+			int song2 = 0; // 2ë²ˆê³¡ ê³ ìœ ë²ˆí˜¸
+			int maxPlay = 0; // ì¬ìƒíšŸìˆ˜
 
-			// 1¹ø°î Ã£±â
+			// 1ë²ˆê³¡ ì°¾ê¸°
 			for(int i = 0; i < genres.length; i++) {
 				if(g.equals(genres[i]) && maxPlay < plays[i]) {
 					song1 = i;
@@ -34,7 +34,7 @@ class Solution {
 
 			maxPlay = 0;
 
-			// Àç»ıÈ½¼ö ÃÊ±âÈ­, 2¹ø°î Ã£±â(1¹ø°î Á¦¿Ü)
+			// ì¬ìƒíšŸìˆ˜ ì´ˆê¸°í™”, 2ë²ˆê³¡ ì°¾ê¸°(1ë²ˆê³¡ ì œì™¸)
 			for(int i = 0; i < genres.length; i++) {
 				if(g.equals(genres[i]) && maxPlay < plays[i] && song1 != i) {
 					song2 = i;
@@ -44,7 +44,7 @@ class Solution {
 
 			numList.add(song1);
 
-			// Àå¸£¿¡ °îÀÌ ÇÑ °³ÀÎ °æ¿ì Á¦¿Ü
+			// ì¥ë¥´ì— ê³¡ì´ í•œ ê°œì¸ ê²½ìš° ì œì™¸
 			if(maxPlay != 0) numList.add(song2);
 		}
 

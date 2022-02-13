@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class PGS42747 {
     public int solution(int[] citations) {
         
         int answer = citations.length;
