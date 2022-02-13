@@ -1,12 +1,12 @@
 import java.util.*;
 
-class Solution {
+class PGS42748 {
     public int[] solution(int[] array, int[][] commands) {
         
         int[] answer = new int[commands.length];
         
         for(int k = 0; k < commands.length; k++) {
-            int[] temp = new int[commands[k][1] - commands[k][0] + 1]; // iºÎÅÍ j±îÁö ¼ýÀÚµé ÀÓ½Ã ÀúÀå
+            int[] temp = new int[commands[k][1] - commands[k][0] + 1]; // ië¶€í„° jê¹Œì§€ ìˆ«ìžë“¤ ìž„ì‹œ ì €ìž¥
             int p = 0;
             
             for(int m = commands[k][0]-1; m < commands[k][1]; m++) {
