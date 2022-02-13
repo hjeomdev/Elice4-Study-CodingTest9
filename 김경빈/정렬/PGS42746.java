@@ -1,26 +1,26 @@
 import java.util.*;
 
-class Solution {
+class PGS42746 {
     public String solution(int[] numbers) {
         
-        // ¹®ÀÚ¿­·Î º¯È¯
+        // ë¬¸ìì—´ë¡œ ë³€í™˜
         String[] result = new String[numbers.length];
         
         for(int i = 0; i < numbers.length; i++) {
 			result[i] = String.valueOf(numbers[i]);
 		}
         
-        // Á¤·Ä
+        // ì •ë ¬
 		Arrays.sort(result, (o1, o2) -> (o2 + o1).compareTo(o1 + o2));
 
-		// 0¸¸ ¿©·¯°³ ÀÖ´Â ¹è¿­ÀÇ °æ¿ì ÇÏ³ªÀÇ 0¸¸ ¸®ÅÏ
+		// 0ë§Œ ì—¬ëŸ¬ê°œ ìˆëŠ” ë°°ì—´ì˜ ê²½ìš° í•˜ë‚˜ì˜ 0ë§Œ ë¦¬í„´
 		if(result[0].equals("0")) {
 			return "0";
 		}
 
 		String answer = "";
         
-		// Á¤·ÄµÈ ¹®ÀÚ ÇÏ³ª·Î ÇÕÄ¡±â
+		// ì •ë ¬ëœ ë¬¸ì í•˜ë‚˜ë¡œ í•©ì¹˜ê¸°
 		for(String a : result) {
 			answer += a;
 		}
