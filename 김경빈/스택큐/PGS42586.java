@@ -1,6 +1,6 @@
 import java.util.*;
 
-class Solution {
+class PGS42586 {
     public int[] solution(int[] progresses, int[] speeds) {
         
         int[] done = {}; // 작업별 완료까지 날짜
