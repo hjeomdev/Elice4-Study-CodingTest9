@@ -1,9 +1,9 @@
 import java.util.*;
 
-class Solution {
+class PGS42583 {
     public int solution(int bridge_length, int weight, int[] truck_weights) {
         
-        List<int[]> truck = new LinkedList<>(); // ´Ù¸®¸¦ °Ç³Ê´Â Æ®·°, [¹«°Ô, ½Ã°£]
+        List<int[]> truck = new LinkedList<>(); // ë‹¤ë¦¬ë¥¼ ê±´ë„ˆëŠ” íŠ¸ëŸ­, [ë¬´ê²Œ, ì‹œê°„]
         
         int answer = 0;
         int totalWeight = 0;
@@ -12,7 +12,7 @@ class Solution {
         
         while(true) {
             
-            // ´Ù¸® À§¿¡ Æ®·°ÀÌ ÀÖÀ» ¶§ ½Ã°£ 1 °¨¼Ò
+            // ë‹¤ë¦¬ ìœ„ì— íŠ¸ëŸ­ì´ ìˆì„ ë•Œ ì‹œê°„ 1 ê°ì†Œ
             for(int j = 0; j < truck.size();) {
                 
                 if(--truck.get(j)[1] == 0) {
@@ -23,7 +23,7 @@ class Solution {
                 }
             }
             
-            // ´ÙÀ½ Æ®·°ÀÇ ¹«°Ô + ´Ù¸® À§ Æ®·°ÀÇ ¹«°Ô ÇÕ < weight -> ´Ù¸® À§¿¡ Ãß°¡
+            // ë‹¤ìŒ íŠ¸ëŸ­ì˜ ë¬´ê²Œ + ë‹¤ë¦¬ ìœ„ íŠ¸ëŸ­ì˜ ë¬´ê²Œ í•© < weight -> ë‹¤ë¦¬ ìœ„ì— ì¶”ê°€
             if (i < truck_weights.length && truck_weights[i] + totalWeight <= weight) {
 				totalWeight += truck_weights[i];
 				truck.add(new int[] { truck_weights[i++], bridge_length });
