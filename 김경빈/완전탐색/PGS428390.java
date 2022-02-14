@@ -12,7 +12,7 @@ class PGS42839 {
     }
 
     Set<Integer> set = new HashSet<>();
-    // 1ºÎÅÍ ³¡±îÁö ¼ø¿­ Á¶ÇÕ
+    // 1ë¶€í„° ëê¹Œì§€ ìˆœì—´ ì¡°í•©
     for (int i = 1; i <= numArr.length; i++) {
       perm(strArr, 0, i, set);
     }
@@ -41,7 +41,7 @@ class PGS42839 {
     arr[j] = temp;
   }
 
-  // ¿¬°á
+  // ì—°ê²°
   public static void print(String[] arr, int k, Set set) {
     StringBuilder s = new StringBuilder();
 
@@ -52,7 +52,7 @@ class PGS42839 {
     primeNumber(set, s);
   }
 
-  // ¼Ò¼ö ÆÇº°
+  // ì†Œìˆ˜ íŒë³„
   public static void primeNumber(Set set, StringBuilder s) {
     int num = Integer.parseInt(String.valueOf(s));
     boolean prime = true;
@@ -61,7 +61,7 @@ class PGS42839 {
       return;
     }
 
-    // Á¦°ö±Ù±îÁö ³ª´²¼­ ¾à¼ö È®ÀÎ
+    // ì œê³±ê·¼ê¹Œì§€ ë‚˜ëˆ ì„œ ì•½ìˆ˜ í™•ì¸
     for (int i = 2; i <= Math.sqrt(num); i++) {
 
       if (num % i == 0) {
