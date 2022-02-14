@@ -1,5 +1,7 @@
 import java.util.*;
 
+//테스트 케이스 6~13 실패
+
 class Solution {
     public ArrayList<Integer> solution(int[] answers) {
         ArrayList<Integer> answer = new ArrayList<>();
