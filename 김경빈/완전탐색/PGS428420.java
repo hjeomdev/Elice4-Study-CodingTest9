@@ -4,13 +4,13 @@ public class PGS42842 {
   public static int[] solution(int brown, int yellow) {
     int[] yellowEdge = findYellowEdge(brown, yellow);
 
-    // º¯¸¶´Ù °¢ Ãß°¡
+    // ë³€ë§ˆë‹¤ ê° ì¶”ê°€
     int[] answer = { yellowEdge[0] + 2, yellowEdge[1] + 2 };
 
     return answer;
   }
 
-  // ³ë¶õ»öÀÇ °¡·Î, ¼¼·Î
+  // ë…¸ë€ìƒ‰ì˜ ê°€ë¡œ, ì„¸ë¡œ
   public static int[] findYellowEdge(int brown, int yellow) {
     int[] result = new int[2]; // [width, height]
     int target = brown / 2 - 2;
