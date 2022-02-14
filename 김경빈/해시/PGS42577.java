@@ -1,5 +1,5 @@
 import java.util.*;
-class Solution {
+class PGS42577 {
     public boolean solution(String[] phone_book) {
         boolean answer = true;
         
