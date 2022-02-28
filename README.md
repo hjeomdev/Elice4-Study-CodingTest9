@@ -9,7 +9,6 @@
 <table>
   <tr>
     <td align="center"><a href="https://github.com/BeenKimKr"><img src="https://avatars.githubusercontent.com/u/96720480?v=4?s=100" width="100px;" alt=""/><br /><sub><b>KyungBeen</b></td>
-    <td align="center"><a href="https://github.com/Totheendlesssea"><img src="https://avatars.githubusercontent.com/u/97578230?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Totheendlesssea</b></td>
     <td align="center"><a href="https://github.com/gwonmin"><img src="https://avatars.githubusercontent.com/u/65943751?v=4?s=100" width="100px;" alt=""/><br /><sub><b>gwonmin</b></td>
     <td align="center"><a href="https://github.com/hyejineom-dev"><img src="https://avatars.githubusercontent.com/u/40953167?v=4?s=100" width="100px;" alt=""/><br /><sub><b>hyejin</b></td>
     <td align="center"><a href="https://github.com/Ldj-git"><img src="https://avatars.githubusercontent.com/u/68588092?v=4?s=100" width="100px;" alt=""/><br /><sub><b>Ldj</b></td>
@@ -94,6 +93,24 @@
   - 방법 3: 옐로우의 가로, 세로 값과 브라운의 개수 값의 연관성으로 조건에 부합하는 것 찾기
 #### 다음 주 문제
 - 탐욕법(체육복, 조이스틱, 큰 수 만들기)
+
+
+### 🔸 2월 21일
+#### 참여자
+: 양권민, 엄혜진, 이동준
+
+#### 이번 주 문제: 탐욕법
+#### 미팅 내용
+- 42862번 문제: 체육복
+- 42839번 문제: 조이스틱
+  - [동준님이 공유한 획기적인 조이스틱 풀이법](https://velog.io/@jeeseob5761/%ED%94%84%EB%A1%9C%EA%B7%B8%EB%9E%98%EB%A8%B8%EC%8A%A4-%EC%A1%B0%EC%9D%B4%EC%8A%A4%ED%8B%B1)
+- 42883번 문제: 큰 수 만들기
+  - Java에서 String은 immutable이기 때문에 [substring](https://docs.oracle.com/javase/7/docs/api/java/lang/String.html#substring(int))을 써도 수정이 어렵다. 대신에 [StringBuilder](https://docs.oracle.com/javase/7/docs/api/java/lang/StringBuilder.html), [StringBuffer](https://docs.oracle.com/javase/7/docs/api/java/lang/StringBuffer.html)를 사용하자.
+  - [substring에 대한 인터뷰 이야기..](https://javarevisited.blogspot.com/2011/10/how-substring-in-java-works.html#axzz7LXKffYXx)
+  - [String vs. StringBuffer vs. StringBuilder](https://coding-factory.tistory.com/546)
+#### 다음 주 문제
+- 탐욕법(구명보트, 섬 연결하기, 단속카메라)
+
 
 
 ---

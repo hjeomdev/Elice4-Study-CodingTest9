@@ -1,6 +1,5 @@
 // 2022. 02. 20
 // 체육복
-// 미해결: 런타임에러
 
 class Solution {
     public int solution(int n, int[] lost, int[] reserve) {
@@ -22,34 +21,32 @@ class Solution {
         }
     
         // 옷을 0개 가지고 있으면 앞, 뒤 사람을 확인해서 1로 만들기
-        // 다음 사람으로 넘어가기 전에, 앞 사람이 1개 이상의 옷을 가지고 있는지 확인
         for(int i = 0; i < n; i++) {
             if(cloth[i] == 0) {
                 // 앞 확인
-                if(i > 0 && cloth[i - 1] > 1) {
-                    cloth[i - 1] -= 1;
-                    cloth[i] += 1;
+                if(i > 0) { // 0번째 사람의 앞 사람은 없음
+                    if(cloth[i - 1] > 1) {
+                        cloth[i - 1] -= 1;
+                        cloth[i] += 1;
+                        continue;
+                    }
                 }
                 // 뒤 확인
-                else if(i < n && cloth[i + 1] > 1) {
-                    cloth[i + 1] -= 1;
-                    cloth[i] += 1;
-                }
-            }
-            
-            if(i >= 1 && cloth[i - 1] < 1) {
-                answer--;
-            }
-        }
-        
-        if(cloth[n - 1] < 1) {
-                answer--;
+                if(i < n - 1) { // n-1번째 사람의 뒷 사람은 없기 때문에 넣은 조건문인데, 인덱스를 잘못 지정해서 런타임에러났음...
+                    if(cloth[i + 1] > 1) {
+                        cloth[i + 1] -= 1;
+                        cloth[i] += 1;
+                    }  
+                } 
+            }   
         }
         
         for(int i = 0; i < n; i++) {
-            System.out.println(cloth[i]);
+            if(cloth[i] < 1) {
+                answer--;
+            }
         }
-        System.out.println(answer);
+        
         
         return answer;
     }
