@@ -22,9 +22,9 @@ public class PGS42897 {
     }
     answer = Math.max(cacheA[length - 2], cacheA[length - 3]);
 
-    cacheA[1] = money[1];
-    cacheA[2] = money[2];
-    cacheA[3] = cacheA[1] + money[3];
+    cacheB[1] = money[1];
+    cacheB[2] = money[2];
+    cacheB[3] = cacheB[1] + money[3];
 
     for (int i = 4; i < length; i++) {
       cacheB[i] = Math.max(cacheB[i - 3] + money[i], cacheB[i - 2] + money[i]);
