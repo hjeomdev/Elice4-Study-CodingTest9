@@ -24,7 +24,7 @@ public class PGS42897 {
 
     cacheB[1] = money[1];
     cacheB[2] = money[2];
-    cacheB[3] = [1] + money[3];
+    cacheB[3] = cacheB[1] + money[3];
 
     for (int i = 4; i < length; i++) {
       cacheB[i] = Math.max(cacheB[i - 3] + money[i], cacheB[i - 2] + money[i]);
